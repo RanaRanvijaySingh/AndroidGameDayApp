@@ -2,8 +2,8 @@ package com.gamedayapp;
 
 import java.io.ObjectInputStream.GetField;
 
-import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
+import android.widget.ProgressBar;
 
 import com.facebook.Request;
 import com.facebook.Response;
@@ -14,7 +14,7 @@ import com.gamedayapp.util.LOG;
 
 public class FacebookService {
 	private static final String TAG = GetField.class.getName();
-	private static FacebookService fbService= new FacebookService();
+	private static FacebookService fbService = new FacebookService();
 
 	private FacebookService() {
 	}
@@ -23,8 +23,9 @@ public class FacebookService {
 		return fbService;
 	}
 
-	public void doFacebookLogin(Context mContext) {
-		Session.openActiveSession((LoginActivity) mContext, true, new Session.StatusCallback() {
+	public void doFacebookLogin(final LoginActivity mContext) {
+		Session.openActiveSession(mContext, true, new Session.StatusCallback() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void call(Session session, SessionState state,
 					Exception exception) {
@@ -34,9 +35,12 @@ public class FacebookService {
 								@Override
 								public void onCompleted(GraphUser user,
 										Response response) {
-									if (user != null) {
-										LOG.v(TAG, "login success");
-									}
+									LOG.v(TAG, "facebook call complete");
+									Intent intent = new Intent(mContext
+											.getApplicationContext(),
+											HomePageActivity.class);
+									mContext.startActivity(intent);
+
 								}
 							});
 				}
