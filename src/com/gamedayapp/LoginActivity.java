@@ -19,8 +19,9 @@ public class LoginActivity extends Activity {
 
 	public void onClickFacebookLogin(View view) {
 		LOG.v(TAG, "Facebook Login");
-		FacebookService fActivity = new FacebookService(this);
-		fActivity.doFacebookLogin();
+		FacebookService fbActivity = FacebookService.getInstance();
+		fbActivity.doFacebookLogin(this);
+
 	}
 
 	public void onClickTwitterLogin(View view) {
