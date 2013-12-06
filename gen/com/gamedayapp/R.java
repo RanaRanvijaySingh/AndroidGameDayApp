@@ -269,10 +269,10 @@ containing a value of this type.
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f07001a;
-        public static final int app_id=0x7f07001f;
-        public static final int app_name=0x7f070019;
-        public static final int cancel=0x7f07001e;
+        public static final int action_settings=0x7f07001b;
+        public static final int app_id=0x7f070019;
+        public static final int app_name=0x7f07001a;
+        public static final int cancel=0x7f07001c;
         public static final int com_facebook_choose_friends=0x7f07000f;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f070000;
         public static final int com_facebook_internet_permission_error_message=0x7f070013;
@@ -298,9 +298,11 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f070008;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f070009;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f07000a;
-        public static final int facebook=0x7f07001c;
-        public static final int hello_world=0x7f07001b;
-        public static final int twitter=0x7f07001d;
+        public static final int facebook=0x7f07001d;
+        public static final int google_plus=0x7f07001e;
+        public static final int hello_world=0x7f07001f;
+        public static final int sign_in=0x7f070020;
+        public static final int twitter=0x7f070021;
     }
     public static final class style {
         /** 
@@ -329,8 +331,10 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080003;
+        public static final int buttonStyle=0x7f080004;
         public static final int com_facebook_loginview_default_style=0x7f080000;
         public static final int com_facebook_loginview_silver_style=0x7f080001;
+        public static final int textViewStyle=0x7f080005;
     }
     public static final class styleable {
         /** Attributes that can be used with a com_facebook_friend_picker_fragment.

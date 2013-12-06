@@ -2,21 +2,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="30dp"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
+    <TextView
+        style="@style/textViewStyle"
+        android:layout_gravity="left"
+        android:text="@string/sign_in" />
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/buttonStyle"
         android:onClick="onClickFacebookLogin"
         android:text="@string/facebook" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/buttonStyle"
         android:onClick="onClickTwitterLogin"
         android:text="@string/twitter" />
+
+    <Button
+        style="@style/buttonStyle"
+        android:onClick="onClickTwitterLogin"
+        android:text="@string/google_plus" />
 
     <ProgressBar
         android:id="@+id/progessBar"
