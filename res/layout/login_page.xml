@@ -2,30 +2,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
+    android:background="@color/dark_gray"
     android:gravity="center"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity" >
 
     <TextView
-        style="@style/textViewStyle"
-        android:layout_gravity="left"
-        android:text="@string/sign_in" />
+        style="@style/textViewStyleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/game_day" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
 
     <Button
         style="@style/buttonStyle"
+        android:background="@color/facebook_blue"
+        android:drawableLeft="@drawable/facebook"
         android:onClick="onClickFacebookLogin"
-        android:text="@string/facebook" />
+        android:text="@string/signin_facebook" />
 
     <Button
         style="@style/buttonStyle"
+        android:background="@color/twitter_blue"
+        android:drawableLeft="@drawable/twitter"
         android:onClick="onClickTwitterLogin"
-        android:text="@string/twitter" />
+        android:text="@string/signin_twitter" />
 
     <Button
         style="@style/buttonStyle"
-        android:onClick="onClickTwitterLogin"
-        android:text="@string/google_plus" />
+        android:background="@color/google_red"
+        android:drawableLeft="@drawable/google_plus"
+        android:onClick="onClickGooglePlusLogin"
+        android:text="@string/signin_google_plus" />
 
     <ProgressBar
         android:id="@+id/progessBar"

@@ -3,7 +3,6 @@ package com.gamedayapp;
 import java.io.ObjectInputStream.GetField;
 
 import android.content.Intent;
-import android.widget.ProgressBar;
 
 import com.facebook.Request;
 import com.facebook.Response;
